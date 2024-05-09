@@ -178,7 +178,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 //   );
 // };
 import { FloatingNav } from "@/components/layout/Navbar/floating-navbar";
-import { IconCurrencyDollar, IconUsersGroup, IconChartDots3, IconHeart } from "@tabler/icons-react";
+import { IconQuestionMark, IconUsersGroup, IconChartDots3, IconHeart } from "@tabler/icons-react";
 import Image from "next/image";
 import Logo from "../logo";
 export function Navbar() {
@@ -195,10 +195,10 @@ export function Navbar() {
       icon: <IconHeart className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Pricing",
-      link: "/#pricing",
+      name: "FAQ",
+      link: "/#faq",
       icon: (
-        <IconCurrencyDollar className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconQuestionMark className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
     {

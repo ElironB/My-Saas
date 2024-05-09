@@ -23,10 +23,10 @@ export default function Home() {
 			<div className="w-full z-10 bg-black">
 			<Benefits />
 			</div>
-			<Image src="/bg.svg" width={1920} height={720} alt="Background" className="absolute max-w-full h-auto translate-y-48"/>
-			<Pline scene="https://prod.spline.design/uvm6ubpk8O3kvIPx/scene.splinecode" className="absolute translate-y-3/4 -translate-x-1/3 h-full w-full pointer-events-none"/>
+			<Pline scene="https://prod.spline.design/uvm6ubpk8O3kvIPx/scene.splinecode" className="absolute translate-y-[80%] -translate-x-[565px] h-full w-full pointer-events-none"/>
 			
 			<Faq/>
+			<Image src="/bg.svg" width={1920} height={720} alt="Background" className="absolute max-w-full h-auto -translate-y-36"/>
 			<HowItWorks />
 			
 

@@ -3,7 +3,7 @@ import { DialogDemo } from "../contact";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 pt-[30px] rounded-2xl max-w-full">
+    <footer className="gradient_footer pt-[30px] max-w-full">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
