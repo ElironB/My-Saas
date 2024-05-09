@@ -99,27 +99,30 @@ export const FloatingNav = ({
           </Link>
         ))}
         {!user ? (
-          <Link href="/sign-in">
-            <button className="border text-l font-medium relative border-neutral-200 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-lg">
+            <button
+              className="border text-l font-medium relative border-neutral-200 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-lg"
+              data-cal-namespace=""
+              data-cal-link="eli-ben/30min"
+              data-cal-config='{"layout":"month_view"}'
+            >
               <span className="transition-colors hover:text-slate-300 duration-300">
-                Login
+                Get a Quote!
               </span>
               <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
             </button>
-          </Link>
         ) : (
           <div className="flex items-center">
-              <button
-                className="border text-l font-medium relative border-neutral-200 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-lg"
-                data-cal-namespace=""
-                data-cal-link="eli-ben/30min"
-                data-cal-config='{"layout":"month_view"}'
-              >
-                <span className="transition-colors hover:text-slate-300 duration-300">
-                  Get a Quote!
-                </span>
-                <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
-              </button>
+            <button
+              className="border text-l font-medium relative border-neutral-200 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-lg"
+              data-cal-namespace=""
+              data-cal-link="eli-ben/30min"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              <span className="transition-colors hover:text-slate-300 duration-300">
+                Get a Quote!
+              </span>
+              <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent h-px" />
+            </button>
           </div>
         )}
       </motion.div>

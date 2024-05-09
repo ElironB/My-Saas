@@ -20,17 +20,15 @@ export default function Home() {
 				<Navbar />
 				<Header />
 			</div>
-			<Parallax translateY={[0, -170]}>
 			<div className="w-full z-10 bg-black">
 			<Benefits />
 			</div>
-			</Parallax>
-			<Image src="/bg.svg" width={1920} height={720} alt="Background" className="absolute max-w-full h-auto -translate-y-96"/>
+			<Image src="/bg.svg" width={1920} height={720} alt="Background" className="absolute max-w-full h-auto translate-y-48"/>
 			<Pline scene="https://prod.spline.design/uvm6ubpk8O3kvIPx/scene.splinecode" className="absolute translate-y-3/4 -translate-x-1/3 h-full w-full pointer-events-none"/>
 			
-			
-			<HowItWorks />
 			<Faq/>
+			<HowItWorks />
+			
 
 			<Footer />
 			
