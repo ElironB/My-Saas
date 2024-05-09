@@ -9,7 +9,7 @@ const getActiveProductsWithPrices = async (): Promise<ProductWithPrice[]> => {
 
     const { data, error } = await supabase
         .from('products')
-        .select('*, prices(*)')
+        .select('id, active, name, description, image, metadata, prices(id, product_id, active, description, unit_amount, currency, type, interval, interval_count, trial_period_days, metadata)')
         .eq('active', true)
         .eq('prices.active', true)
         .order('metadata->index')

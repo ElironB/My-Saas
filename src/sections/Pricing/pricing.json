@@ -1,72 +1,65 @@
 [
 	{
 		"type": "monthly",
-		"title": "Free",
-		"icon": "/images/pricing/free.svg",
-		"subTitle": "Perfect plan to get started",
-		"pricing": "0",
-		"pricingUnit": "$",
-		"description": "A free plan grants you access to some cool features of Spend.In.",
-		"features": [
-			{
-				"name": "Sync accross device",
-				"isIncluded": true
-			},
-			{
-				"name": "5 workspace",
-				"isIncluded": true
-			},
-			{
-				"name": "Collaborate with 5 user",
-				"isIncluded": true
-			},
-			{
-				"name": "Sharing permission",
-				"isIncluded": false
-			},
-			{
-				"name": "Admin tools",
-				"isIncluded": false
-			},
-			{
-				"name": "100+ integrations",
-				"isIncluded": false
-			}
-		],
-		"button": "Get Your Free Plan"
-	},
-	{
-		"type": "monthly",
 		"title": "Pro",
 		"icon": "/images/pricing/pro.svg",
-		"subTitle": "Perfect plan to get started",
-		"pricing": "12",
+		"subTitle": "Perfect plan to get started and upscale your business",
+		"pricing": "30",
 		"pricingUnit": "$",
-		"description": "A free plan grants you access to some cool features of Spend.In.",
+		"description": "A Pro plan grants you access to all the features of JoyfulAPI (but smaller).",
 		"popular": true,
 		"features": [
 			{
-				"name": "Everything in Free Plan",
+				"name": "100 Hyper Personalized Emails",
 				"isIncluded": true
 			},
 			{
-				"name": "Unlimited workspace",
+				"name": "3 Different Lead Lists / 3MB (approximately 6000 rows)",
 				"isIncluded": true
 			},
 			{
-				"name": "Collaborative workspace",
+				"name": "Lead List Population",
 				"isIncluded": true
 			},
 			{
-				"name": "Sharing permission",
+				"name": "Branded Models",
 				"isIncluded": true
 			},
 			{
-				"name": "Admin tools",
+				"name": "Personal Support",
+				"isIncluded": true
+			}
+		],
+		"button": "Get Started"
+	},
+	{
+		"type": "yearly",
+		"title": "Pro",
+		"icon": "/images/pricing/pro.svg",
+		"subTitle": "Perfect plan to get started and upscale your business",
+		"pricing": "300",
+		"pricingUnit": "$",
+		"description": "A Pro plan grants you access to all the features of JoyfulAPI (but smaller).",
+		"popular": true,
+		"features": [
+			{
+				"name": "100 Hyper Personalized Emails",
 				"isIncluded": true
 			},
 			{
-				"name": "100+ integrations",
+				"name": "3 Different Lead Lists / 3MB (approximately 6000 rows)",
+				"isIncluded": true
+			},
+			{
+				"name": "Lead List Population",
+				"isIncluded": true
+			},
+			{
+				"name": "Branded Models",
+				"isIncluded": true
+			},
+			{
+				"name": "Personal Support",
 				"isIncluded": true
 			}
 		],
@@ -76,36 +69,101 @@
 		"type": "monthly",
 		"title": "Ultimate",
 		"icon": "/images/pricing/ultimate.svg",
-		"subTitle": "Perfect plan to get started",
-		"pricing": "33",
+		"subTitle": "Perfect plan for people who want extra",
+		"pricing": "50",
 		"pricingUnit": "$",
-		"description": "A free plan grants you access to some cool features of Spend.In.",
+		"description": "A Ultimate plan grants you access to all the features of JoyfulAPI.",
 		"features": [
 			{
-				"name": "Everything in Pro Plan",
+				"name": "300 Hyper Personalized Emails",
 				"isIncluded": true
 			},
 			{
-				"name": "Daily performance reports",
+				"name": "5 Different Lead Lists / 5MB (approximately 10000 rows)",
 				"isIncluded": true
 			},
 			{
-				"name": "Dedicated assistant",
+				"name": "Lead List Population",
 				"isIncluded": true
 			},
 			{
-				"name": "Artificial intelligence",
+				"name": "Branded Models",
 				"isIncluded": true
 			},
 			{
-				"name": "Marketing tools & automations",
-				"isIncluded": true
-			},
-			{
-				"name": "Advanced security",
+				"name": "Personal Support",
 				"isIncluded": true
 			}
 		],
 		"button": "Get Started"
+	},
+	{
+		"type": "yearly",
+		"title": "Ultimate",
+		"icon": "/images/pricing/ultimate.svg",
+		"subTitle": "Perfect plan for people who want extra",
+		"pricing": "500",
+		"pricingUnit": "$",
+		"description": "A Ultimate plan grants you access to all the features of JoyfulAPI.",
+		"features": [
+			{
+				"name": "300 Hyper Personalized Emails",
+				"isIncluded": true
+			},
+			{
+				"name": "5 Different Lead Lists / 5MB (approximately 10000 rows)",
+				"isIncluded": true
+			},
+			{
+				"name": "Lead List Population",
+				"isIncluded": true
+			},
+			{
+				"name": "Branded Models",
+				"isIncluded": true
+			},
+			{
+				"name": "Personal Support",
+				"isIncluded": true
+			}
+		],
+		"button": "Get Started"
+	},
+	{
+		"type": "both",
+		"title": "Enterprise",
+		"icon": "/images/pricing/enterprise.svg",
+		"subTitle": "Perfect plan for actually scaling your business",
+		"pricing": " ",
+		"pricingUnit": " ",
+		"description": "An Enterprise plan grants you access to all the features of JoyfulAPI (but bigger).",
+		"features": [
+			{
+				"name": "Everything in Pro Plan (Of Course)",
+				"isIncluded": true
+			},
+			{
+				"name": "Subject to negotiation",
+				"isIncluded": true
+			},
+			{
+				"name": "Lead List Population",
+				"isIncluded": true
+			},
+			{
+				"name": "Fine-Tined Branded Models",
+				"isIncluded": true
+			},
+			{
+				"name": "Twitter(X) Profiles Summary",
+				"isIncluded": true
+			},
+			{
+				"name": "Personal Support",
+				"isIncluded": true
+			}
+
+		],
+		"button": "Contact Us"
 	}
 ]

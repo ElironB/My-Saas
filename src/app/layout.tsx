@@ -1,15 +1,16 @@
+
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
-
-const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
+import { Providers } from '@/app/providers';
+const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "AI2SaaS",
-	description: "Create your own AI SaaS",
+	title: "JoyfulAPI",
+	description: "JoyfulAPI - email outreach made easy!",
 };
 
 export default async function RootLayout({
@@ -22,11 +23,11 @@ export default async function RootLayout({
 			<body className={font.className}>
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="light"
+					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange>
 					<SupabaseProvider>
-						<UserProvider>{children}</UserProvider>
+						<UserProvider><Providers>{children}</Providers></UserProvider>
 					</SupabaseProvider>
 				</ThemeProvider>
 			</body>

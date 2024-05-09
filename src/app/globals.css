@@ -61,3 +61,46 @@
 html {
 	scroll-behavior: smooth;
 }
+
+.text-gradient_purple-blue {
+	background: linear-gradient(90deg, rgb(139 92 246) 0%, #73e0f8 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-shadow: #474747;
+  }
+.text-gradient_text_white {
+	background: linear-gradient(30deg, rgb(190, 190, 190) 0%, #474747 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+  }
+
+::-webkit-scrollbar {
+	width: 15px;
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px linear-gradient(30deg, rgb(190, 190, 190) 0%, #474747 100%); 
+	border-radius: 10px;
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(to right, transparent, #cbd5e1, transparent); 
+	border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(to right, transparent, #54575c, transparent); ; 
+  }
+ 
+.parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+	

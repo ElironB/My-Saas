@@ -1,0 +1,31 @@
+.w-full.sm\:w-auto {
+  width: 300px;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  background: rgb(0, 0, 0);
+  color: white;
+  /* border-radius: 0.5rem; */
+  border-bottom: 2px solid var(--slate-300);
+  border-right: 2px solid var(--slate-300);
+  border-top: 2px solid var(--slate-300);
+  border-left: 2px solid var(--slate-300);
+  transition-duration: 1s;
+  box-shadow: 3px 3px 0px rgba(224, 224, 224, 0.4);
+  transition-property: border-top, border-left, border-bottom, border-right, box-shadow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  box-shadow: rgba(224, 224, 224, 0.4) 5px 5px, rgba(192, 192, 192, 0.3) 10px 10px, rgba(160, 160, 160, 0.2) 15px 15px;
+}
+
+
