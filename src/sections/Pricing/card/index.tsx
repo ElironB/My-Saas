@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 
 const PricingCard: FC<Pricing> = (props) => {
 	return (
-		<div className=" bg-slate-900 p-6 rounded-xl flex flex-col gap-4 w-[350px] mb-5 hover:scale-105 transition-transform 0.2s">
+		<div className=" gradient_footer p-6 rounded-xl flex flex-col gap-4 w-[350px] mb-5">
 			<div className="flex w-full items-center justify-between">
 				<div className="flex items-center gap-3">
 					<Image src={props.icon} alt={props.title} width={30} height={30} />
@@ -51,7 +51,7 @@ const PricingCard: FC<Pricing> = (props) => {
 					);
 				})}
 			</div>
-			<Button className="w-[80%] mx-auto">{props.button}</Button>
+			<button className="w-[80%] mx-auto btn_normal z-10">{props.button}</button>
 		</div>
 	);
 };

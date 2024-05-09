@@ -40,7 +40,7 @@ const Pricing = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-2" id="pricing">
+    <div className="flex flex-col items-center justify-center gap-2 p-12" id="pricing">
       <h1 className="text-3xl font-semibold">Ready to Get Started?</h1>
       <p className="text-[20px]"> Choose a plan that suits your business needs </p>
       <div className="flex items-center gap-4 mt-6">

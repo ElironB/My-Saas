@@ -5,7 +5,7 @@ import Benefits from "@/sections/Benefits";
 import Header from "@/sections/Header";
 import { HowItWorks } from "@/sections/HowItWorks";
 import Image from "next/image";
-import { Parallax } from "react-scroll-parallax";
+import Pricing from "@/sections/Pricing";
 import Pline from "@/components/ui/pline";
 import Faq from "@/sections/Faq";
 
@@ -24,8 +24,8 @@ export default function Home() {
 			<Benefits />
 			</div>
 			<Pline scene="https://prod.spline.design/uvm6ubpk8O3kvIPx/scene.splinecode" className="absolute translate-y-[80%] -translate-x-[565px] h-full w-full pointer-events-none"/>
-			
 			<Faq/>
+			{/* <Pricing/> */}
 			<Image src="/bg.svg" width={1920} height={720} alt="Background" className="absolute max-w-full h-auto -translate-y-36"/>
 			<HowItWorks />
 			
