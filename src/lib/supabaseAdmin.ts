@@ -6,10 +6,10 @@ import { toDateTime } from './helpers';
 import { Database } from '../../types_db';
 import { Price, Product } from '../../types';
 
-export const supabaseAdmin = createClient<Database>(
-    process.env.NEXT_PUBLIC_SUPABASE_URL || '',
-    process.env.SUPABASE_SERVICE_ROLE_KEY || ''
-);
+// export const supabaseAdmin = createClient<Database>(
+//     process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+//     process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+// );
 
 const upsertProductRecord = async (product: Stripe.Product) => {
     const productData: Product = {

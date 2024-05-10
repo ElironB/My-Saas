@@ -99,7 +99,13 @@ html {
 ::-webkit-scrollbar-thumb:hover {
 	background: linear-gradient(to right, transparent, #54575c, transparent); ; 
   }
- 
+
+::-webkit-selection {
+    background: rgba(0, 0, 0, 0.541);
+}
+::selection {
+    background: rgba(0, 0, 0, 0.589);
+}
 .parallax {
 	background-attachment: fixed;
 	background-position: center;
