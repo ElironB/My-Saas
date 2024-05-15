@@ -6,6 +6,9 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import { IconPhone } from "@tabler/icons-react";
 
 export default function Faq() {
@@ -74,36 +77,92 @@ export default function Faq() {
   ];
 
   return (
-    <div className="flex flex-col p-12 rounded-lg sm:w-1/2 w-3/4 mx-auto relative pb-36" id="faq">
-      <h1 className="text-5xl mb-4 justify-start items-start">
-        Frequently Asked{" "}
-        <span style={{ fontFamily: "Courier New", fontWeight: "bold" }}>
-          Questions
-        </span>
-      </h1>
-      <Accordion type="single" collapsible>
-        {faqData.map((item) => (
-          <AccordionItem key={item.key} value={item.key}>
-            <AccordionTrigger className="text-xl">
-              {item.question}
-            </AccordionTrigger>
-            <AccordionContent className="text-lg">
-              {item.answer}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
-      <div className="flex items-center justify-center p-12">
-      <button
-        className="btn active:scale-95 rounded-lg w-40 "
-        data-cal-namespace=""
-        data-cal-link="eli-ben/30min"
-        data-cal-config='{"layout":"month_view"}'
-        >
-        Contact Us
-           <IconPhone style={{ marginLeft: '4px' }}/>{" "}
-      </button>
-      </div>
+    <div
+      className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2 py-10 relative h-full w-full pb-36 "
+      id="faq"
+    >
+      <motion.div className="flex flex-col ml-32 rounded-lg mx-auto relative " initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}>
+        <h1 className="text-6xl mb-4 justify-start items-start">
+          Frequently Asked{" "}
+          <span style={{ fontFamily: "Courier New", fontWeight: "bold" }}>
+            Questions
+          </span>
+        </h1>
+        <Accordion type="single" collapsible>
+          {faqData.map((item) => (
+            <AccordionItem key={item.key} value={item.key}>
+              <AccordionTrigger className="text-xl">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-lg">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4, ease: "easeIn" }}
+        viewport={{ once: true }}
+        className="flex-col rounded-lg mx-auto"
+      >
+        <CardContainer className="inter-var p-9">
+          <CardBody className="bg-gray-50 relative h-[50vh] flex-col items-center justify-center dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[22rem] rounded-xl p-4">
+            <CardItem
+              translateZ="50"
+              rotateZ={10}
+              className=" p-9"
+            >
+              <div className="w-[144px] h-[144px] bg-white rounded-full mb-5 translate-x-14">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline={true}
+                  className="object-cover translate-y-3"
+                  width={144}
+                  height={144}
+                >
+                  <source src="/bookcall.webm" type="video/mp4" />
+                </video>
+              </div>
+            </CardItem>
+            <CardItem
+              translateZ="50"
+              className="text-2xl text-center font-bold text-neutral-600 dark:text-white"
+            >
+              Book a 15-minute intro call Now!
+            </CardItem>
+            {/* <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                Hover over this card to unleash the power of CSS perspective
+              </CardItem> */}
+            <CardItem
+              translateZ="100"
+            >
+              <div className="flex items-center justify-center p-12 translate-x-3 -translate-y-4">
+                <button
+                  className="btn active:scale-95 rounded-lg w-40 "
+                  data-cal-namespace=""
+                  data-cal-link="eli-ben/30min"
+                  data-cal-config='{"layout":"month_view"}'
+                >
+                  Contact Us
+                  <IconPhone style={{ marginLeft: "4px" }} />{" "}
+                </button>
+              </div>
+            </CardItem>
+          </CardBody>
+        </CardContainer>
+      </motion.div>
     </div>
   );
 }

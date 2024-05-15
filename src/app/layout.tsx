@@ -5,12 +5,11 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
-import { Providers } from '@/app/providers';
 const font = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "JoyfulAPI",
-	description: "JoyfulAPI - email outreach made easy!",
+	title: "Octic",
+	description: "Octic - Your Time Is Important.",
 };
 
 export default async function RootLayout({
@@ -20,14 +19,14 @@ export default async function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={font.className}>
+			<body className={`bg-gray-900 ${font.className}`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange>
 					<SupabaseProvider>
-						<UserProvider><Providers>{children}</Providers></UserProvider>
+						<UserProvider>{children}</UserProvider>
 					</SupabaseProvider>
 				</ThemeProvider>
 			</body>

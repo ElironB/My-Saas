@@ -80,7 +80,7 @@ export function Dashboard() {
             href="/"
             className="group flex h-9 w-9 items-center justify-center gap-2 text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
           >
-            <Image src="/logo.svg" width={36} height={36} alt="AutoMagically" className="transition-transform group-hover:scale-110 duration-200" />
+            <Image src="/opcticlogo.png" width={36} height={36} alt="AutoMagically" className="transition-transform group-hover:scale-110 duration-200" />
             <span className="sr-only">AutoMagically</span>
           </Link>
           <TooltipProvider>

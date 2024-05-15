@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
 
         <p className="mt-8">For any questions or concerns regarding this Privacy Policy, please contact us at eliron2608@gmail.com.</p>
 
-        <p className="mt-4">Thank you for using JoyfulAPI!</p>
+        <p className="mt-4">Thank you for using Octic!</p>
       </div>
       <Footer />
     </div>

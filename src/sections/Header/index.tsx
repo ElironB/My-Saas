@@ -1,20 +1,19 @@
 "use client";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import "@/sections/Header/index.css";
 import { useState, useEffect } from "react";
-import { Input } from "@/components/ui/input";
-import { Span } from "@/components/ui/moving-border";
-import { IconArrowRight } from "@tabler/icons-react";
+import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight.tsx";
 import { Resend } from "resend";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-
 const Header = () => {
-  const resend = new Resend('re_LnJF5Fy8_AZkfsaFBRZqs1umEdmT2Unom');
+  const resend = new Resend("re_LnJF5Fy8_AZkfsaFBRZqs1umEdmT2Unom");
   const supabase = useSupabaseClient();
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState({ text: "", isError: false });
   const [isValidEmail, setIsValidEmail] = useState(true);
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newEmail = e.target.value;
@@ -37,17 +36,17 @@ const Header = () => {
       let { data: existingEmails, error: fetchError } = await supabase
         .from("emails")
         .select()
-        .eq('email', email.toLowerCase());
-    
+        .eq("email", email.toLowerCase());
+
       if (fetchError) {
-        console.error('Error fetching emails:', fetchError);
+        console.error("Error fetching emails:", fetchError);
         setMessage({
           text: "An error occurred. Please try again.",
           isError: true,
         });
         return;
       }
-    
+
       if (existingEmails != null && existingEmails.length > 0) {
         // Email already exists in the database
         setMessage({
@@ -59,9 +58,9 @@ const Header = () => {
         const { data: insertData, error: insertError } = await supabase
           .from("emails")
           .insert([{ email: email.toLowerCase() }]);
-    
+
         if (insertError) {
-          console.error('Error inserting email:', insertError);
+          console.error("Error inserting email:", insertError);
           setMessage({
             text: "Failed to submit your email. Please try again.",
             isError: true,
@@ -75,7 +74,7 @@ const Header = () => {
           setEmail("");
         }
       }
-    };
+    }
   };
   useEffect(() => {
     if (message.text !== "") {
@@ -86,34 +85,51 @@ const Header = () => {
     }
   }, [message.text]);
 
+  function handleMouseMove({
+    currentTarget,
+    clientX,
+    clientY,
+  }: React.MouseEvent<HTMLDivElement>) {
+    if (!currentTarget) return;
+    let { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
+
   return (
-    <div className="flex h-[100vh] flex-col items-center justify-center w-[50vw] md:flex-row md:pb-24 relative">
-      <div className="flex flex-col sm:items-start gap-6 items-center text-center sm:text-left -translate-y-16">
-        <motion.h1
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+    <div className="flex h-[100vh] flex-col items-center justify-center md:flex-row md:pb-24 relative " onMouseMove={handleMouseMove}>
+      <motion.div className="flex flex-col gap-6 items-center text-center -translate-y-16" >
+        
+         <HeroHighlight>
+          <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl sm:text-6xl font-semibold leading-snug pt-36 text-gradient_text_white"
+          className="text-4xl sm:text-8xl font-semibold pt-36 "
         >
-          Not A Developer <br></br>
-          Agency.
+          A time-saving agency <br></br> with a {" "}
+          <Highlight className="text-white leading-snug">
+          twist
+        </Highlight>
+          
         </motion.h1>
+        </HeroHighlight>
         <motion.p
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-gray-400 text-l sm:text-xl leading-normal text-gradient_text_white font-semibold"
+          className="text-gray-400 text-l sm:text-2xl leading-normal font-semibold mt-4"
         >
-          We Automate Entire Businesses.<br></br>
-          We Will Automate Anything That Can Be Automated. <br></br>
+          The Future of Work, Today Automation with Effective Outcomes.
         </motion.p>
-        <Span className="bg-black px-4 py-1 rounded-full text-white">
+        {/* <Span className="bg-black px-4 py-1 rounded-full text-white">
           25% off for early signups
-        </Span>
+        </Span> */}
         <motion.div
-          className="flex items-center gap-4 w-auto sm:w-full relative"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          className="flex items-center justify-center gap-4 w-auto sm:w-full relative"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <AnimatePresence>
@@ -135,22 +151,32 @@ const Header = () => {
               </motion.div>
             )}
           </AnimatePresence>
-          <Input
+          {/* <Input
             type="email"
             placeholder="Enter your email"
             className="w-full sm:w-auto"
             style={{ width: "300px" }}
             onChange={handleEmailChange}
-          />
-          <button
-            className="btn active:scale-95 active:signal rounded-lg"
-            onClick={handleSubmit}
-          >
-            Send
-            <IconArrowRight />
+          /> */}
+          <button className="btn active:scale-95 active:signal rounded-lg w-fit">
+            Free Quote!
           </button>
         </motion.div>
-      </div>
+        <motion.div
+          className="flex row"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          <div className="loader absolute translate-y-1 mr-2">
+          <div className="circle circle-1 absolute"></div>
+          <div className="circle circle-2 absolute"></div>
+          <div className="circle circle-3 absolute"></div>
+          <div className="circle circle-4 absolute"></div>
+          </div>
+          <p className="text-sm"> Save Time Now!</p>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };

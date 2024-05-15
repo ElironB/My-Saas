@@ -1,8 +1,8 @@
-.w-full.sm\:w-auto {
-  width: 300px;
-}
+
 
 .btn {
+  width: 194px;
+  height: 60px;
   padding: 0.5rem 1rem;
   font-weight: 700;
   background: rgb(0, 0, 0);
@@ -26,6 +26,99 @@
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   box-shadow: rgba(224, 224, 224, 0.4) 5px 5px, rgba(192, 192, 192, 0.3) 10px 10px, rgba(160, 160, 160, 0.2) 15px 15px;
+}
+.loader {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.circle-1 {
+  width: 5px;
+  height: 5px;
+  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.1855) 0%, rgba(68, 253, 38, 0.196) 100%);
+  animation-name: circle-1-animation;
+}
+
+.circle-3 {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.265) 0%, rgba(68, 253, 38, 0.28) 100%);
+  animation-name: circle-3-animation;
+}
+
+.circle-4 {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(109.8deg, rgba(52, 248, 35, 0.265) 0%, rgba(68, 253, 38, 0.28) 100%);
+  animation-name: circle-4-animation;
+}
+
+@keyframes circle-1-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-2-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-3-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-4-animation {
+  0% {
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
 }
 
 

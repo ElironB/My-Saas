@@ -1,18 +1,31 @@
 import Image from "next/image";
 import { DialogDemo } from "../contact";
+import { motion } from "framer-motion";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="gradient_footer pt-[30px] max-w-full">
+    <motion.footer
+      className="pt-[30px] max-w-full rounded-t-lg border-t-2 border-gray-600 bg-slate-800"
+      initial={{ opacity: 0,  y: 50 }}
+      whileInView={{ opacity: 1,  y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
+      viewport={{ once: true }}
+    >
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <div className="flex items-center">
-              <Image src="/logo.svg" alt="JoyfulAPI" width={44} height={44} />
+                <Image
+                  src="/opcticlogo.png"
+                  alt="Octic"
+                  width={100}
+                  height={100}
+                  className=" translate-x-6  translate-y-2"
+                />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  <span className="ml-2 text-2xl font-bold tracking-wide">
-                    JoyfulAPI
+                  <span className="ml-2 text-8xl font-bold tracking-wide -translate-x-10">
+                    ctic
                   </span>
                 </span>
               </div>
@@ -58,13 +71,13 @@ const Footer: React.FC = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2024{" "}
             <a href="/" className="hover:underline">
-              JoyfulAPI™
+              Octic™
             </a>
             . All Rights Reserved.
           </span>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

@@ -9,16 +9,16 @@ const PrivacyPolicy = () => {
         <h1 className="text-3xl font-semibold mb-4">Terms of Service</h1>
         <p>Last Updated: 04/08/2024</p>
 
-        <p className="mt-8">Welcome to JoyfulAPI!</p>
+        <p className="mt-8">Welcome to Octic!</p>
 
         <p>By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">1. Access to the Service</h2>
-        <p>- Access to JoyfulAPI&apos;s software is granted to the user upon a one-time payment, providing unlimited access to the product.</p>
+        <p>- Access to Octic&apos;s software is granted to the user upon a one-time payment, providing unlimited access to the product.</p>
         <p>- Users have the option to request a full refund within 7 days of purchase.</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">2. User Data</h2>
-        <p>- JoyfulAPI collects user email and payment information solely for the purpose of providing the Service.</p>
+        <p>- Octic collects user email and payment information solely for the purpose of providing the Service.</p>
         <p>- For more information on how we collect, use, and disclose personal information, please refer to our Privacy Policy.</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">3. Non-personal Data</h2>
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
 
         <p className="mt-8">For any questions or concerns regarding these Terms, please contact us at eliron2608@gmail.com.</p>
 
-        <p className="mt-4">Thank you for using JoyfulAPI!</p>
+        <p className="mt-4">Thank you for using Octic!</p>
       </div>
       <Footer />
     </div>

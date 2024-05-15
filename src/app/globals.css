@@ -76,7 +76,7 @@ html {
 	background-clip: text;
   }
 .gradient_footer {
-	background: linear-gradient(0deg, rgb(80, 80, 80) 0%, #000000 100%);
+	background: linear-gradient(0deg, rgb(80, 80, 80) 0%, rgb(17 24 39) 100%);
   }  
 
 ::-webkit-scrollbar {

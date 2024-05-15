@@ -9,21 +9,21 @@ const Logo = () => {
     <>
       <Image
         src="/hovered_logo.svg"
-        alt="JoyfulAPI"
+        alt="Octic"
         width={34}
         height={34}
-        className={`transition-opacity duration-1000 ease-in-out ${
+        className={`transition-opacity duration-200 ease-in-out -translate-x-2 ${
           hovered ? "opacity-100" : "opacity-0"
         }`}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       />
       <Image
-        src="/logo.svg"
-        alt="JoyfulAPI"
+        src="/opcticlogo.png"
+        alt="Octic"
         width={34}
         height={34}
-        className={`absolute top-0 left-0 transition-opacity duration-1000 ease-in-out ${
+        className={`absolute top-0 left-0 transition-opacity duration-200 ease-in-out  ${
           hovered ? "opacity-0" : "opacity-100"
         }`}
         onMouseEnter={() => setHovered(true)}

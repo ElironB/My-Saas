@@ -32,13 +32,13 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 //       <div className="relative flex items-center justify-between">
 //         <Link
 //           href="/"
-//           aria-label="JoyfulAPI"
-//           title="JoyfulAPI"
+//           aria-label="Octic"
+//           title="Octic"
 //           className="inline-flex items-center"
 //         >
-// 		<Image src="/logo.svg" alt="JoyfulAPI" width={24} height={24} />
+// 		<Image src="/opcticlogo.png" alt="Octic" width={24} height={24} />
 //           <span className="ml-2 text-xl font-bold tracking-wide">
-//             JoyfulAPI
+//             Octic
 //           </span>
 //         </Link>
 //         <ul className="hidden items-center gap-12 lg:flex">
@@ -118,13 +118,13 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 //                     <div>
 //                       <Link
 //                         href="/"
-//                         aria-label="JoyfulAPI"
-//                         title="JoyfulAPI"
+//                         aria-label="Octic"
+//                         title="Octic"
 //                         className="inline-flex items-center"
 //                       >
-//                         <Image src="/logo.svg" alt="JoyfulAPI" width={24} height={24} />
+//                         <Image src="/opcticlogo.png" alt="Octic" width={24} height={24} />
 //                         <span className="ml-2 text-xl font-bold tracking-wide uppercase text-slate-900 hover:text-violet-700">
-//                           JoyfulAPI
+//                           Octic
 //                         </span>
 //                       </Link>
 //                     </div>
@@ -187,7 +187,7 @@ export function Navbar() {
       name:
         (<Logo/>),
       link: "/",
-      icon: <Image src="/logo.svg" alt="JoyfulAPI" width={24} height={24} />,
+      icon: <Image src="/opcticlogo.png" alt="Octic" width={24} height={24} />,
     },
     {
       name: "Benefits",

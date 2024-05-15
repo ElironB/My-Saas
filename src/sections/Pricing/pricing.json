@@ -6,7 +6,7 @@
 		"subTitle": "Perfect plan to get started and upscale your business",
 		"pricing": "30",
 		"pricingUnit": "$",
-		"description": "A Pro plan grants you access to all the features of JoyfulAPI (but smaller).",
+		"description": "A Pro plan grants you access to all the features of Octic (but smaller).",
 		
 		"features": [
 			{
@@ -39,7 +39,7 @@
 		"subTitle": "Perfect plan to get started and upscale your business",
 		"pricing": "300",
 		"pricingUnit": "$",
-		"description": "A Pro plan grants you access to all the features of JoyfulAPI (but smaller).",
+		"description": "A Pro plan grants you access to all the features of Octic (but smaller).",
 		
 		"features": [
 			{
@@ -73,7 +73,7 @@
 		"pricing": "50",
 		"pricingUnit": "$",
 		"popular": true,
-		"description": "A Ultimate plan grants you access to all the features of JoyfulAPI.",
+		"description": "A Ultimate plan grants you access to all the features of Octic.",
 		"features": [
 			{
 				"name": "300 Hyper Personalized Emails",
@@ -106,7 +106,7 @@
 		"pricing": "500",
 		"pricingUnit": "$",
 		"popular": true,
-		"description": "A Ultimate plan grants you access to all the features of JoyfulAPI.",
+		"description": "A Ultimate plan grants you access to all the features of Octic.",
 		"features": [
 			{
 				"name": "300 Hyper Personalized Emails",
@@ -138,7 +138,7 @@
 		"subTitle": "Perfect plan for actually scaling your business",
 		"pricing": " ",
 		"pricingUnit": " ",
-		"description": "An Enterprise plan grants you access to all the features of JoyfulAPI (but bigger).",
+		"description": "An Enterprise plan grants you access to all the features of Octic (but bigger).",
 		"features": [
 			{
 				"name": "Everything in Pro Plan (Of Course)",
