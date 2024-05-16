@@ -85,20 +85,8 @@ const Header = () => {
     }
   }, [message.text]);
 
-  function handleMouseMove({
-    currentTarget,
-    clientX,
-    clientY,
-  }: React.MouseEvent<HTMLDivElement>) {
-    if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
-
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-
   return (
-    <div className="flex h-[100vh] flex-col items-center justify-center md:flex-row md:pb-24 relative " onMouseMove={handleMouseMove}>
+    <div className="flex h-[100vh] max-w-full flex-col items-center justify-center md:flex-row md:pb-24 relative z-40 ">
       <motion.div className="flex flex-col gap-6 items-center text-center -translate-y-16" >
         
          <HeroHighlight>
@@ -106,11 +94,11 @@ const Header = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl sm:text-8xl font-semibold pt-36 "
+          className="text-5xl  md:text-7xl lg:text-8xl font-semibold pt-36 "
         >
-          A time-saving agency <br></br> with a {" "}
+          A time-saving agency <br></br>  {" "}
           <Highlight className="text-white leading-snug">
-          twist
+          with a twist
         </Highlight>
           
         </motion.h1>

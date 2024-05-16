@@ -1,7 +1,4 @@
-"use client";
-
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -49,7 +46,7 @@ export const CardContainer = ({
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
         className={cn(
-          " flex items-center justify-center",
+          "flex items-center justify-center",
           containerClassName
         )}
         style={{
@@ -86,7 +83,7 @@ export const CardBody = ({
   return (
     <div
       className={cn(
-        "h-96 w-96 [transform-style:preserve-3d]  [&>*]:[transform-style:preserve-3d] flex-row items-center justify-center",
+        "h-96 w-96 [transform-style:preserve-3d] flex flex-col items-center justify-center",
         className
       )}
     >
@@ -123,22 +120,20 @@ export const CardItem = ({
 
   useEffect(() => {
     const handleAnimations = () => {
-        if (!ref.current) return;
-        if (isMouseEntered) {
-          ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
-        } else {
-          ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
-        }
-      };
+      if (!ref.current) return;
+      if (isMouseEntered) {
+        ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+      } else {
+        ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+      }
+    };
     handleAnimations();
   }, [isMouseEntered, rotateX, rotateY, rotateZ, translateX, translateY, translateZ]);
-
- 
 
   return (
     <Tag
       ref={ref}
-      className={cn("w-fit transition duration-200 ease-linear flex-row items-center justify-center", className)}
+      className={cn("w-fit transition duration-200 ease-linear flex items-center justify-center", className)}
       {...rest}
     >
       {children}

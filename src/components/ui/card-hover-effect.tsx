@@ -11,6 +11,7 @@ export const HoverEffect = ({
     description: string;
     image: string;
     background?: string;
+    class?: string;
   }[];
   className?: string;
 }) => {
@@ -33,7 +34,7 @@ export const HoverEffect = ({
                 alt="Background"
                 width={200}
                 height={200}
-                className="max-w-full mx-auto absolute -z-10 -translate-x-5 -translate-y-14"
+                className={`max-w-full mx-auto absolute -z-10 ${item.class}` }
               />}
               <video
                 autoPlay
@@ -66,7 +67,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full p-3 overflow-hidden w-full space-x-5 bg-trasperent dark:border-white/[0.2]  group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full p-3 overflow-hidden w-full space-x-5 bg-trasperent relative z-20",
         className
       )}
     >
@@ -106,7 +107,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-2 mb-0 text-zinc-400 tracking-wide text-md  text-center leading-relaxed w-[85%]",
+        "mt-2 mb-0 text-zinc-300 tracking-wide text-md  text-center leading-relaxed w-[85%]",
         className
       )}
     >

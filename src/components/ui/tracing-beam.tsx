@@ -2,7 +2,12 @@ import React, { useEffect, useRef, useState, useCallback, useMemo  } from "react
 import { motion, useTransform, useScroll, useSpring, useInView, useMotionValue } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const TracingBeam = ({ children, className }: { children: React.ReactNode, className: string }) => {
+type TracingBeamProps = {
+    children: React.ReactNode;
+    className: string;
+  };
+  
+  const TracingBeam: React.FC<TracingBeamProps> = ({ children, className}) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -10,7 +15,7 @@ const TracingBeam = ({ children, className }: { children: React.ReactNode, class
     });
     const contentRef = useRef<HTMLDivElement>(null);
     const [svgHeight, setSvgHeight] = useState(2000);
-    const circlePositions = useMemo(() => [[98,20], [595,20],[1125,20],[1960, 20]], []);
+    const circlePositions = useMemo(() => [[98,20], [570,20],[1040,20],[1790, 20]], []);
 
     const setSvgHeightAndTitlePositions = useCallback(() => {
         if (contentRef.current) {
@@ -64,7 +69,7 @@ const TracingBeam = ({ children, className }: { children: React.ReactNode, class
                         <React.Fragment key={index}>
                             <motion.circle
                                 className={"hidden sm:block"}
-                                cx={x}
+                                cx={20}
                                 cy={y + 15}
                                 r="19"
                                 fill="#1F2937"
@@ -78,7 +83,7 @@ const TracingBeam = ({ children, className }: { children: React.ReactNode, class
                             />
                             <text
                                 className={"hidden sm:block"}
-                                x={x}
+                                x={20}
                                 y={y+15}
                                 fontSize="19"
                                 fontWeight="bold"

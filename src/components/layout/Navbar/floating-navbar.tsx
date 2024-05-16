@@ -102,7 +102,7 @@ export const FloatingNav = ({
             <button
               className="border text-l font-medium relative border-neutral-200 bg-slate-900 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-full"
               data-cal-namespace=""
-              data-cal-link="eli-ben/30min"
+              data-cal-link="eli-ben/15min"
               data-cal-config='{"layout":"month_view"}'
             >
               <span className="transition-colors hover:text-slate-300 duration-300">
@@ -115,7 +115,7 @@ export const FloatingNav = ({
             <button
               className="border text-l font-medium relative bg-slate-900 border-neutral-200 dark:border-white/[0.3] text-black dark:text-white px-4 py-2 rounded-full"
               data-cal-namespace=""
-              data-cal-link="eli-ben/30min"
+              data-cal-link="eli-ben/15min"
               data-cal-config='{"layout":"month_view"}'
             >
               <span className="transition-colors hover:text-slate-300 duration-300">
