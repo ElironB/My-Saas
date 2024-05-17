@@ -7,6 +7,7 @@ import { HowItWorks } from "@/sections/HowItWorks";
 import { Between } from "@/sections/BetweenSections";
 import Pline from "@/components/ui/pline";
 import Faq from "@/sections/Faq";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -28,11 +29,11 @@ export default function Home() {
       <div className="mx-auto w-[75vw] z-10">
         <Benefits />
       </div>
-      <Faq />
+      
       {/* <Pricing/> */}
 
       <HowItWorks />
-
+      <Faq />
       <Footer />
     </main>
   );
