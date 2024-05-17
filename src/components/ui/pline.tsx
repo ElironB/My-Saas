@@ -23,7 +23,7 @@ const Pline: React.FC<PlineProps> = ({ scene, className }) => {
   
     return isTrue;
   };
-  const isTrue = useDelayedTrue(2000);
+  const isTrue = useDelayedTrue(2500);
   return (<>
     {isTrue && (<AnimatePresence><motion.div initial={{ opacity: 0, y: 450 }}
     whileInView={{ opacity: 1, y: 400 }}

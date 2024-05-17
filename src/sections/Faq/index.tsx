@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import "@/sections/Header/index.css";
 import {
@@ -59,7 +60,7 @@ export default function Faq() {
                   loop
                   muted
                   playsInline={true}
-                  className="object-cover w-full h-full rounded-full"
+                  className="object-cover w-full h-full scale-95 rounded-full"
                 >
                   <source src="/bookcall.webm" type="video/mp4" />
                 </video>

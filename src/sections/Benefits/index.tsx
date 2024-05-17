@@ -1,30 +1,48 @@
+"use client"
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Benefits: React.FC = () => {
   return (
-    <div
-      id="benefits"
-      className="mb-26 sm:h-[80vh] md:h-full h-full px-8 flex-col items-center mx-auto w-[65vw] justify-center "
-    >
+    <div className="h-full">
+      <div
+        id="benefits"
+        className="mb-26 sm:h-[80vh] md:h-full h-full px-8 flex-col items-center mx-auto w-[65vw] justify-center "
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-7 flex flex-col items-center "
+        >
+          <p className="text-7xl mb-4">Your Benefits.</p>
+          <Image
+            src="/benefits/underline.svg"
+            alt="Underline"
+            width={250}
+            height={100}
+            className="max-w-full h-auto absolute translate-x-0 translate-y-20 sm:translate-x-16 sm:translate-y-2"
+          />
+        </motion.div>
+        <HoverEffect items={data} />
+      </div>
       <motion.div
+        className=" w-full h-1/4 flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className="mb-7 flex flex-col items-center "
       >
-        <p className="text-7xl mb-4">Your Benefits.</p>
         <Image
-          src="/benefits/underline.svg"
-          alt="Underline"
-          width={250}
-          height={100}
-          className="max-w-full h-auto absolute translate-x-0 translate-y-20 sm:translate-x-16 sm:translate-y-2"
+          src="/misc-13.svg"
+          width={400}
+          height={400}
+          alt="misc"
+          className=""
         />
       </motion.div>
-      <HoverEffect items={data} />
     </div>
   );
 };

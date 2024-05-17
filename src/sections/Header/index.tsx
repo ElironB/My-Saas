@@ -96,9 +96,9 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-5xl  md:text-7xl lg:text-8xl font-semibold pt-36 "
         >
-          A time-saving agency <br></br>  {" "}
+          Think Different. <br></br>  {" "}
           <Highlight className="text-white leading-snug">
-          with a twist
+          Think Octic
         </Highlight>
           
         </motion.h1>
@@ -109,7 +109,7 @@ const Header = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-gray-400 text-l sm:text-2xl leading-normal font-semibold mt-4"
         >
-          The Future of Work, Today Automation with Effective Outcomes.
+          Automations with Effective Outcomes.
         </motion.p>
         {/* <Span className="bg-black px-4 py-1 rounded-full text-white">
           25% off for early signups

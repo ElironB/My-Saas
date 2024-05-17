@@ -15,7 +15,7 @@ export function HowItWorks() {
   return (
     <TracingBeam className="px-6 space-y-28 w-full" >
       <div
-        className="max-w-2xl mx-auto antialiased pt-4 relative shadow-xl"
+        className="max-w-2xl mx-auto antialiased pt-4 relative"
         id="howitworks"
       >
         <h1 className="mb-10 text-5xl font-bold">How It Works</h1>
