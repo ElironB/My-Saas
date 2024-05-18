@@ -13,37 +13,54 @@ export function HowItWorks() {
     [0, 1, 1, 1, 1]
   );
   return (
-    <TracingBeam className="px-6 space-y-28 w-full" >
-      <div
-        className="max-w-2xl mx-auto antialiased pt-4 relative"
-        id="howitworks"
-      >
-        <h1 className="mb-10 text-5xl font-bold">How It Works</h1>
-        <motion.div
-          ref={ref}
-          style={{
-            opacity: itemsVisible,
-          }}
+    <>
+      <TracingBeam className="px-6 space-y-28 w-full">
+        <div
+          className="max-w-2xl mx-auto antialiased pt-4 relative"
+          id="howitworks"
         >
-          {content.map((item, index) => (
-            <motion.div
-              key={`content-${index}`}
-              className="mb-16"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl mb-6 font-semibold">{item.title}</h2>
-              <div className="text-lg prose prose-lg dark:prose-invert">
-                <p className="mb-4">{item.description}</p>
-                {item.content}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </TracingBeam>
+          <h1 className="mb-10 text-5xl font-bold">How It Works</h1>
+          <motion.div
+            ref={ref}
+            style={{
+              opacity: itemsVisible,
+            }}
+          >
+            {content.map((item, index) => (
+              <motion.div
+                key={`content-${index}`}
+                className="mb-16"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="text-3xl mb-6 font-semibold">{item.title}</h2>
+                <div className="text-lg prose prose-lg dark:prose-invert">
+                  <p className="mb-4">{item.description}</p>
+                  {item.content}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </TracingBeam>
+      <motion.div
+        className="w-full flex items-center justify-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+      >
+        <Image
+          src="/divider.svg"
+          width={800}
+          height={800}
+          alt="misc"
+          className=""
+        />
+      </motion.div>
+    </>
   );
 }
 

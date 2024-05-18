@@ -195,19 +195,20 @@ export function Navbar() {
       icon: <IconHeart className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "FAQ",
-      link: "/#faq",
-      icon: (
-        <IconQuestionMark className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
-    },
-    {
       name: "How It Works",
       link: "/#howitworks",
       icon: (
         <IconChartDots3 className="h-4 w-4 text-neutral-500 dark:text-white" />
       ),
     },
+    {
+      name: "FAQ",
+      link: "/#faq",
+      icon: (
+        <IconQuestionMark className="h-4 w-4 text-neutral-500 dark:text-white" />
+      ),
+    },
+    
   ];
   return (
     <div className="relative  w-full">
