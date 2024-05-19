@@ -11,7 +11,9 @@ export const HoverEffect = ({
     description: string;
     image: string;
     background?: string;
-    class?: string;
+    arrow?: string;
+    Bclass?: string;
+    Aclass?: string;
   }[];
   className?: string;
 }) => {
@@ -23,25 +25,31 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <motion.span key={idx} initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: idx * 0.2 }}
-        viewport={{ once: true }} className="relative group  block p-2 h-full w-full ">
+        <motion.span
+          key={idx}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: idx * 0.2 }}
+          viewport={{ once: true }}
+          className="relative group  block p-2 h-full w-full "
+        >
           <Card>
             <div className="w-[144px] h-[144px]">
-              { item.background && <Image
-                src={item.background}
-                alt="Background"
-                width={200}
-                height={200}
-                className={`max-w-full mx-auto absolute -z-10 ${item.class}` }
-              />}
+              {item.background && (
+                <Image
+                  src={item.background}
+                  alt="Background"
+                  width={200}
+                  height={200}
+                  className={`max-w-full mx-auto absolute -z-10 ${item.Bclass}`}
+                />
+              )}
               <video
                 autoPlay
                 loop
                 muted
                 playsInline={true}
-                className="object-cover"
+                className={`object-cover ${item.Aclass}`}
                 width={144}
                 height={144}
               >
@@ -51,6 +59,16 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
+          {item.arrow && idx < items.length - 1 && (
+            <Image
+              src={item.arrow}
+              alt="Arrow"
+              width={300}
+              height={200}
+              className={`absolute z-10 transform -translate-x-1/2 -translate-y-1/2 hidden sm:block md:block ${item.Aclass}`}
+              style={{ left: "100%", top: "40%" }}
+            />
+          )}
         </motion.span>
       ))}
     </div>

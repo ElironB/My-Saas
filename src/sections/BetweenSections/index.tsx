@@ -34,7 +34,7 @@ export const Between = () => {
         />
       </motion.div>
       <motion.div
-        className="px-[100px] mx-auto flex items-center justify-center"
+        className="px-[20px] mx-auto flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -46,7 +46,7 @@ export const Between = () => {
         </h1>
       </motion.div>
       <motion.div
-        className="w-[50vw] h-1/4 mx-auto mt-6 flex flex-col space-y-6 items-center justify-center"
+        className=" w-[80vw] md:w-[70w] lg:w-[50vw] h-1/4 mx-auto mt-6 flex flex-col space-y-6 items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}

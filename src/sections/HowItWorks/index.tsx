@@ -1,50 +1,26 @@
-"use client";
-import React, { useEffect, useRef, useState, useMemo } from "react";
+"use client"
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import TracingBeam from "@/components/ui/tracing-beam";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { motion } from "framer-motion";
 
 export function HowItWorks() {
-  const { scrollYProgress } = useScroll();
-  const ref = useRef<HTMLDivElement>(null);
-  const itemsVisible = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5, 0.75, 1],
-    [0, 1, 1, 1, 1]
-  );
   return (
     <>
-      <TracingBeam className="px-6 space-y-28 w-full">
-        <div
-          className="max-w-2xl mx-auto antialiased pt-4 relative"
-          id="howitworks"
+      <div
+        id="howitworks"
+        className="mb-26 my sm:h-[80vh] md:h-full h-full px-8 flex-col items-center mx-auto w-[75vw] justify-center "
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mb-7 flex flex-col items-center "
         >
-          <h1 className="mb-10 text-5xl font-bold">How It Works</h1>
-          <motion.div
-            ref={ref}
-            style={{
-              opacity: itemsVisible,
-            }}
-          >
-            {content.map((item, index) => (
-              <motion.div
-                key={`content-${index}`}
-                className="mb-16"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-3xl mb-6 font-semibold">{item.title}</h2>
-                <div className="text-lg prose prose-lg dark:prose-invert">
-                  <p className="mb-4">{item.description}</p>
-                  {item.content}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </TracingBeam>
+          <p className="text-7xl mb-4">How It Works</p>
+        </motion.div>
+        <HoverEffect items={content} />
+      </div>
       <motion.div
         className="w-full flex items-center justify-center"
         initial={{ opacity: 0, y: 50 }}
@@ -57,7 +33,7 @@ export function HowItWorks() {
           width={800}
           height={800}
           alt="misc"
-          className=""
+          className=" scal"
         />
       </motion.div>
     </>
@@ -66,53 +42,31 @@ export function HowItWorks() {
 
 const content = [
   {
-    title: "Step 1: Getting to Know You",
+    title: "Understand & Streamline",
     description:
-      "Let's sit down and chat about your business. We'll find out where we can help you grow and make things run smoother.",
-    content: (
-      <div className="h-full w-full flex items-center justify-center text-white">
-        <Image
-          src="/images/Leadlist.webp"
-          width={500}
-          height={500}
-          alt="Business Understanding"
-        />
-      </div>
-    ),
+      "Chat about your business, find growth opportunities, and streamline operations.",
+    image: "/howitworks/card1.webm",
+    background: "/howitworks/card1.svg",
+    arrow: "/howitworks/arrow2-3.svg",
+    Bclass: "scale- -translate-x-6 -translate-y-6",
   },
   {
-    title: "Step 2: Spotting Time Wasters",
+    title: "Automate Tasks",
     description:
-      "We'll dig deep and spot where you're losing precious time and resources. Our goal is to streamline your operations and make your life easier.",
-    content: (
-      <div className="h-full w-full flex items-center justify-center text-white">
-        <Image
-          src="/images/Populated_Leadlist.webp"
-          width={500}
-          height={500}
-          alt="Efficiency Insights"
-        />
-      </div>
-    ),
+      "Set up custom-made automations so you can focus on what matters.",
+      image: "/howitworks/card2.webm",
+      background: "/howitworks/card2.svg",
+    arrow: "/howitworks/arrow2-3.svg",
+    Bclass: "scale-120 -translate-x-6 -translate-y-6",
   },
   {
-    title: "Step 3: Automating the Boring Stuff",
+    title: "Launch & Perfect",
     description:
-      "No more repetitive tasks! We'll set up personalized automations tailored to your business, so you can focus on what really matters.",
-    content: (
-      <div className="h-full w-full flex items-center justify-center text-white">
-        <Image
-          src="/images/Example_email.webp"
-          width={500}
-          height={300}
-          alt="Personalized Automations"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Step 4: Launch and Perfect",
-    description:
-      "Ready, set, go! Launch your automations and we'll keep tweaking them until they're just right. Your time is valuable, and we're here to make sure you save as much of it as possible.",
+      "Launch automations and tweak them until they’re just right.",
+      image: "/howitworks/card3.webm",
+      background: "/howitworks/card3.svg",
+      Bclass: "-translate-x-6 -translate-y-6",
+      Aclass: "scale-75 ",
+
   },
 ];

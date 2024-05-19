@@ -94,7 +94,7 @@ const Header = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl  md:text-7xl lg:text-8xl font-semibold pt-36 "
+          className="text-6xl  md:text-7xl lg:text-8xl font-semibold pt-36 "
         >
           Think Different. <br></br>  {" "}
           <Highlight className="text-white leading-snug">
@@ -107,9 +107,9 @@ const Header = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-gray-400 text-l sm:text-2xl leading-normal font-semibold mt-4"
+          className="text-gray-400 text-xl sm:text-2xl leading-normal font-semibold mt-4"
         >
-          Automations with Effective Outcomes.
+          Automations with Effective Outcomes. <br></br>Your One Stop To Time Freedom
         </motion.p>
         {/* <Span className="bg-black px-4 py-1 rounded-full text-white">
           25% off for early signups

@@ -18,7 +18,7 @@ export default function Home() {
     >
       <Pline
         scene="https://prod.spline.design/NTwW6U5ID333fvMR/scene.splinecode"
-        className="absolute w-[90vw] md:w-[80w] lg:w-[75vw] h-[60vh] translate-y-[384px] pointer-events-none"
+        className="absolute w-[90vw] md:w-[80w] lg:w-[75vw] h-[65vh] translate-y-[384px] pointer-events-none"
       />
 
       <div className="px-[20px]">
