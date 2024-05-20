@@ -77,7 +77,7 @@ export default function Faq() {
                 <button
                   className="btn active:scale-95 rounded-lg w-40 "
                   data-cal-namespace=""
-                  data-cal-link="eli-ben/15min"
+                  data-cal-link="octic/15min"
                   data-cal-config='{"layout":"month_view"}'
                 >
                   Contact Us

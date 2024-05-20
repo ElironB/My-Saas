@@ -8,16 +8,16 @@ const Benefits: React.FC = () => {
     <div className="h-full">
       <div
         id="benefits"
-        className="mb-26 sm:h-[80vh] md:h-full h-full px-8 flex-col items-center mx-auto w-[65vw] justify-center"
+        className="mb-26 sm:h-[80vh] md:h-full h-full px-8 flex-col items-center mx-auto justify-center"
       >
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mb-7 flex flex-col items-center "
+          className="mb-16 flex flex-col items-center "
         >
-          <p className="text-7xl mb-4">Your Benefits.</p>
+          <p className="text-7xl text-center">Your Benefits.</p>
           <Image
             src="/benefits/underline.svg"
             alt="Underline"

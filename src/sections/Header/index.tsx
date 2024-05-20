@@ -145,9 +145,11 @@ const Header = () => {
             className="w-full sm:w-auto"
             style={{ width: "300px" }}
             onChange={handleEmailChange}
-          /> */}
-          <button className="btn active:scale-95 active:signal rounded-lg w-fit">
-            Free Quote!
+          /> */}  
+          <button className="btn active:scale-95 active:signal rounded-lg w-fit" data-cal-namespace=""
+              data-cal-link="octic/15min"
+              data-cal-config='{"layout":"month_view"}'>
+            Book a Call!
           </button>
         </motion.div>
         <motion.div

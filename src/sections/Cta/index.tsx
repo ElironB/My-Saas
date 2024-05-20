@@ -8,7 +8,7 @@ import { getCalApi } from "@calcom/embed-react";
 	  })();
 	}, [])
 	return <button className=" "data-cal-namespace=""
-	  data-cal-link="eli-ben/15min"
+	  data-cal-link="octic/15min"
     
 	  data-cal-config='{"layout":"month_view"}'
 	  >Click me</button>;

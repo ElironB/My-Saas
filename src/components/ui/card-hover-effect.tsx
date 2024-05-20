@@ -13,14 +13,13 @@ export const HoverEffect = ({
     background?: string;
     arrow?: string;
     Bclass?: string;
-    Aclass?: string;
   }[];
   className?: string;
 }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 py-10 relative h-full w-full",
+        "grid grid-cols-1 md:grid-cols-2 mx-auto lg:grid-cols-3 -translate-x-[20%] md:-translate-x-0 lg:-translate-x-0 relative h-full w-full",
         className
       )}
     >
@@ -31,7 +30,7 @@ export const HoverEffect = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: idx * 0.2 }}
           viewport={{ once: true }}
-          className="relative group  block p-2 h-full w-full "
+          className="relative group block p-2 h-full w-full "
         >
           <Card>
             <div className="w-[144px] h-[144px]">
@@ -49,7 +48,7 @@ export const HoverEffect = ({
                 loop
                 muted
                 playsInline={true}
-                className={`object-cover ${item.Aclass}`}
+                className={`object-cover`}
                 width={144}
                 height={144}
               >
@@ -59,16 +58,6 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-          {item.arrow && idx < items.length - 1 && (
-            <Image
-              src={item.arrow}
-              alt="Arrow"
-              width={300}
-              height={200}
-              className={`absolute z-10 transform -translate-x-1/2 -translate-y-1/2 hidden sm:block md:block ${item.Aclass}`}
-              style={{ left: "100%", top: "40%" }}
-            />
-          )}
         </motion.span>
       ))}
     </div>
@@ -85,7 +74,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full p-3 overflow-hidden w-full space-x-5 bg-trasperent relative z-20",
+        "rounded-2xl h-full p-3 overflow-hidden  w-[85vw] md:w-full lg:w-full space-x-0 lg:space-x-5 bg-transparent relative z-20",
         className
       )}
     >
@@ -97,6 +86,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -107,7 +97,7 @@ export const CardTitle = ({
   return (
     <p
       className={cn(
-        "text-zinc-100 font-bold  text-2xl text-center tracking-wide mt-7",
+        "text-zinc-100 font-bold text-2xl text-center tracking-wide mt-7",
         className
       )}
     >
@@ -115,6 +105,7 @@ export const CardTitle = ({
     </p>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -125,7 +116,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-2 mb-0 text-zinc-300 tracking-wide text-md  text-center leading-relaxed w-[85%]",
+        "mt-2 mb-0 text-zinc-300 tracking-wide text-md text-center leading-relaxed w-full sm:w-[90%] md:w-[85%]",
         className
       )}
     >

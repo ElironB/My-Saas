@@ -14,7 +14,7 @@ export const Between = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-5xl font-semibold text-start">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl text-center md:text-center lg:text-start font-semibold">
           &quot;Octic shows that they <br></br>know the art of systems.&quot;
         </h1>
       </motion.div>
@@ -40,7 +40,7 @@ export const Between = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <h1 className="text-5xl font-semibold text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-5xl text-center font-semibold">
           &quot;Experience a you&apos;ll never go<br></br> back&quot;
           transformation
         </h1>
@@ -52,9 +52,9 @@ export const Between = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <p className="text-2xl font-semibold text-center text-zinc-400">
+        <p className="text-xl md:text-2xl lg:text-2xl font-semibold text-center text-zinc-400">
           Octic replaces outdated systems,<br></br> empowers your team to be up
-          to 56% more<br></br> efficient, and reclaims your most valuable asset:{" "}
+          to 56% more efficient, and reclaims your most valuable asset:{" "}
           <span style={{ fontWeight: "bold" }}>
             Time.
           </span>
@@ -62,7 +62,7 @@ export const Between = () => {
         <button
           className="btn active:scale-95 rounded-lg w-40 "
           data-cal-namespace=""
-          data-cal-link="eli-ben/15min"
+          data-cal-link="octic/15min"
           data-cal-config='{"layout":"month_view"}'
         >
           Contact Us
