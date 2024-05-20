@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
         <p>- We may use web cookies to collect non-personal information about users&apos; interactions with the Service.</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">4. Governing Law</h2>
-        <p>- These Terms shall be governed and construed in accordance with the laws of [Your Country/Region], without regard to its conflict of law provisions.</p>
+        <p>- These Terms shall be governed and construed in accordance with the laws of United Kingdom, without regard to its conflict of law provisions.</p>
 
         <h2 className="text-xl font-semibold mt-8 mb-4">5. Updates to Terms</h2>
         <p>- Users will be notified of any updates to these Terms via email.</p>
