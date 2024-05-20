@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-xl font-semibold mt-8 mb-2">Updates to the Privacy Policy</h2>
         <p>Users will be notified of any updates to this Privacy Policy via email.</p>
 
-        <p className="mt-8">For any questions or concerns regarding this Privacy Policy, please contact us at eliron2608@gmail.com.</p>
+        <p className="mt-8">For any questions or concerns regarding this Privacy Policy, please contact us at Eli@octic.dev .</p>
 
         <p className="mt-4">Thank you for using Octic!</p>
       </div>
