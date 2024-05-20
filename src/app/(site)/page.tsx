@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main
-      className="bg-gray-900 bg-dot-white/[0.3] w-[90vw] md:w-[80w] lg:w-[75vw] mx-auto w"
+      className="bg-gray-900 bg-dot-white/[0.3] w-[90vw] md:w-[80w] lg:w-[75vw] mx-auto"
       id="root"
     >
       <Pline

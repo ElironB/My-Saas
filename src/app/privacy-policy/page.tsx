@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="bg-[#0D121F] px-[100px] bg-dot-white/[0.1]">
+    <div className="bg-gray-900 bg-dot-white/[0.3] w-[90vw] md:w-[80w] lg:w-[75vw] mx-auto">
       <Navbar />
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-semibold mb-4">Privacy Policy</h1>
